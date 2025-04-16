@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Safety & Monitoring System</title>
+  <link rel="stylesheet" href="0b971ca6-8d46-4749-8553-79b7f68038cf.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #c3e5e2, #f3e5f5);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    .login-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .car-image {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    .dashboard {
+      padding: 40px 20px;
+    }
+
+    .dashboard-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1950&q=80')
+                  no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeInSlide 1s ease-out;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="loginWrapper" class="login-wrapper">
+    <div id="loginForm" class="login-container">
+      <h3 class="text-center mb-4">Welcome Back 👋</h3>
+      <form id="login">
+        <div class="form-floating mb-3">
+          <input type="text" id="username" class="form-control" placeholder="Username" required />
+          <label for="username">Username</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="password" id="password" class="form-control" placeholder="Password" required />
+          <label for="password">Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+    </div>
+
+    <!-- Car Image -->
+    <img src="https://images.unsplash.com/photo-1616374599600-5c22dddf86c3?auto=format&fit=crop&w=1350&q=80"
+         alt="Car Image"
+         class="img-fluid car-image" />
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Driver Safety System</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center justify-content-center">
+      <div>
+        <h1 class="display-4">Ensuring Safe Driving with AI</h1>
+        <p class="lead">Real-time monitoring for driver safety and alert system</p>
+      </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard container text-center">
+      <h2 class="mb-4">Dashboard Overview</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dashboard-card">
+            <h5>Registered Drivers</h5>
+            <p>View and manage all drivers in the system.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dashboard-card">
+            <h5>Live Monitoring</h5>
+            <p>Monitor driver behavior and vehicle conditions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dashboard-card">
+            <h5>Alert Logs</h5>
+            <p>Get a record of triggered safety alerts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <p>&copy; 2025 Driver Safety System | All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("login").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("loginWrapper").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Driver Safety System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-container">
+    <h3 class="text-center mb-4">Welcome Back 👋</h3>
+    <form id="loginForm">
+      <div class="form-floating mb-3">
+        <input type="text" id="username" class="form-control" placeholder="Username" required />
+        <label for="username">Username</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input type="password" id="password" class="form-control" placeholder="Password" required />
+        <label for="password">Password</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+
+  <div class="login-image-container text-center">
+    <img src="https://images.unsplash.com/photo-1616374599600-5c22dddf86c3?auto=format&fit=crop&w=1350&q=80"
+         alt="Car Image"
+         class="img-fluid car-image rounded shadow" />
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Dummy login redirect — you can replace this with backend auth later
+      window.location.href = "/homepage.html";
+    });
+  </script>
+
+</body>
+</html>
